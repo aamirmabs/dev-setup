@@ -2,6 +2,20 @@
 
 Ideally I would be using a gist, but I'm maintaining the notes here as it would be easier to manage links to source material and organize topics in a markdown file.
 
+## Setup VM
+
+Current set up is running a Ubuntu 20.4 LTS as a VM on a Windows machine. Follow standard procedure for set up and install. Install the Guest additions after setup.
+
+### Improve performance
+
+- Make sure [3D acceleration is enabled](https://blogs.oracle.com/scoter/oracle-vm-virtualbox-6-3d-acceleration-for-ubuntu-1804-guest) else make the necessary changes.
+- Set base memory 4-8 GB
+- Set display memory to max 128 MB
+- Monitor count to 2 for dual monitor set up
+- Enable 3D Acceleration
+- If graphics card is used, go its program and make sure that graphics card is enabled for the VM program
+- Allocate more cores to processor - currently 4 cores assigned
+
 ## Software
 
 - VSCode
