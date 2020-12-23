@@ -50,3 +50,28 @@ Check if SSH key is already installed
 If not, set it up using `ssh-keygen -C <youremail>`
 
 Set up key on the Github settings page. Get key using `cat ~/.ssh/id_rsa.pub`
+
+### Oh My ZSH
+
+- First install `zsh` with `sudo apt install zsh`
+- Make sure you have cURL and wget installed `sudo apt install curl wget`
+- Install Oh My ZSH with curl `sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
+- Or with wget `$ sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"`
+- Or Clone the repository `git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh`
+- backup your existing ~/.zshrc file `cp ~/.zshrc ~/.zshrc.orig`
+- Create a new zsh configuration file `cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc`
+- Change your default shell `chsh -s $(which zsh)`
+- Log out from your user session and log back in to see this change.
+
+#### powerlevel10K Theme
+
+View the documentation on the [Github page](https://github.com/romkatv/powerlevel10k).
+
+#### Plugins
+
+- Clone [Z.sh](https://github.com/rupa/z) to your home directory and set up on config file
+- [zsh-autosuggestions](https://www.sitepoint.com/zsh-tips-tricks/)
+  - `git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions`
+  - Then add the plugin `zsh-autosuggestions` to list in `~/zshrc`
+- [command-not-found](https://github.com/ohmyzsh/ohmyzsh/wiki/plugins#command-not-found) looks up for any spelling mistakes in typed command
+- [sudo](https://github.com/ohmyzsh/ohmyzsh/wiki/plugins#sudo) used double `Esc` presses to add sudo in front of current command or if prompt is empty it will populate the previous command with sudo.
